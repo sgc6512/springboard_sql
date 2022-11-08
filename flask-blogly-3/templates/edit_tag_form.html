@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Tag</title>
+  </head>
+  <body>
+    <h1>Edit Tag</h1>
+    <form action="/tags/{{tag.id}}/edit" method="post">
+      Name
+      <input type="text" name="name" placeholder="Enter a name for the tag" />
+      <br />
+      <button>Edit</button>
+    </form>
+    <form action="/tags">
+      <button type="submit">Cancel</button>
+    </form>
+  </body>
+</html>

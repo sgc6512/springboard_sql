@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tag Details</title>
+  </head>
+  <body>
+    <h1>{{tag.name}}</h1>
+    <ul>
+      {% for pt in tag.posts %}
+      <li>
+        <a href="/posts/{{pt.post_id}}">{{pt.post.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <form action="/tags/{{tag.id}}/edit">
+      <button type="submit">Edit</button>
+    </form>
+    <form action="/tags/{{tag.id}}/delete" method="post">
+      <button type="submit">Delete</button>
+    </form>
+    <hr />
+  </body>
+</html>

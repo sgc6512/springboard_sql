@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags</title>
+  </head>
+  <body>
+    <h1>Tags</h1>
+    <ul>
+      {% for tag in tags %}
+      <li>
+        <a href="/tags/{{tag.id}}">{{tag.name}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <br />
+    <form action="/tags/new">
+      <button type="submit">Add Tag</button>
+    </form>
+    <form action="/users">
+      <button type="submit">Users Page</button>
+    </form>
+  </body>
+</html>
